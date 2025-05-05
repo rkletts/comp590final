@@ -21,9 +21,9 @@ In Java, Dog and Cat extend Animal. In Elixir, Dog and Cat are separate modules 
 
 The speak functions in Dog and Cat act like method overrides in Java. When the Animal process receives a :speak message, it calls the correct speak/2 function based on the module it was given. That’s how I implemented polymorphism, because different modules respond differently at runtime.
 
-## How to Run
-elixir animal.exs
-
 In Java, getName() is a method to access a private field. In Elixir, the name is also private. It’s stored in the loop and can only be retrieved with a {:get_name, sender} message. This is how I simulated encapsulation, by keeping state inside the process and only exposing access through message passing.
 
 The Main module in Elixir is like the main method in the Java class. It creates the animal “objects” (which are really processes), sends them :speak messages, and waits to get a response back.
+
+## How to Run
+elixir animal.exs
