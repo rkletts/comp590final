@@ -24,3 +24,6 @@ In Go, channels are first class shared data structures, so fan-out (one producer
 To mimic fan in and fan out in Elixir, you'd need to introduce an intermediary process, like a router or hub. The two producer processes would send messages to this central dispatcher, which would then be responsible for forwarding the messages to the consumers. This lets multiple producers "fan-in" to one place, and then that dispatcher can "fan-out" to multiple consumers.
 
 One would likely want some logic in the dispatcher to manage load balancing—maybe alternating which consumer gets a message or checking which one is available. This adds more complexity compared to Go, but it's a common pattern in Elixir thanks to its actor model.
+
+## How to Run
+go run main.go
